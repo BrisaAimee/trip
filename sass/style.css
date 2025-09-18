@@ -1,0 +1,76 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+  color: #252422;
+}
+
+header {
+  background: #252422;
+  color: #ffffff;
+  padding: 1em;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+header nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.buscador {
+  background: #ffffff;
+  padding: 2em;
+  margin: 2em auto;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.buscador form {
+  display: grid;
+  gap: 1em;
+}
+.buscador form input, .buscador form select, .buscador form button {
+  padding: 0.8em;
+  border: 1px solid rgb(142.4647887324, 139.1549295775, 132.5352112676);
+  border-radius: 5px;
+}
+.buscador form button {
+  background: #e85d28;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+.buscador form button:hover {
+  background: rgb(199.6428571429, 70.5714285714, 21.3571428571);
+}
+
+.destinos {
+  text-align: center;
+}
+.destinos h2 {
+  margin-top: 2em;
+}
+.destinos .cards {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+.destinos .cards .card {
+  background: #403d39;
+  color: #ffffff;
+  padding: 2em;
+  border-radius: 10px;
+  width: 150px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}/*# sourceMappingURL=style.css.map */
