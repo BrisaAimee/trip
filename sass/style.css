@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background: #252422;
+  background: #e85d28;
   color: #ffffff;
   padding: 1em;
 }
@@ -15,17 +15,27 @@ header nav {
   justify-content: space-between;
   align-items: center;
 }
+header nav img {
+  width: 20%;
+}
 header nav ul {
   list-style: none;
   display: flex;
   gap: 1em;
 }
 header nav ul li a {
-  color: #ffffff;
+  color: #252422;
   text-decoration: none;
 }
 
-.buscador {
+#fondo {
+  background-image: url("../media/fondo.jpg");
+  padding-bottom: 1em;
+  padding-top: 1em;
+  background-size: cover;
+  background-position: center;
+}
+#fondo .buscador {
   background: #ffffff;
   padding: 2em;
   margin: 2em auto;
@@ -34,23 +44,25 @@ header nav ul li a {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-.buscador form {
+#fondo .buscador form {
   display: grid;
   gap: 1em;
 }
-.buscador form input, .buscador form select, .buscador form button {
+#fondo .buscador form input,
+#fondo .buscador form select,
+#fondo .buscador form button {
   padding: 0.8em;
   border: 1px solid rgb(142.4647887324, 139.1549295775, 132.5352112676);
   border-radius: 5px;
 }
-.buscador form button {
+#fondo .buscador form button {
   background: #e85d28;
   color: #ffffff;
   font-weight: bold;
   cursor: pointer;
   border: none;
 }
-.buscador form button:hover {
+#fondo .buscador form button:hover {
   background: rgb(199.6428571429, 70.5714285714, 21.3571428571);
 }
 
@@ -78,23 +90,47 @@ header nav ul li a {
   background-color: #d86060;
 }
 
+.actividades {
+  width: 80%;
+  margin-top: 2em;
+  padding: 1em;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+.actividades h3 {
+  color: #e85d28;
+  margin-bottom: 0.5em;
+}
+.actividades p {
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
 .destinos {
   text-align: center;
 }
 .destinos h2 {
-  margin-top: 2em;
+  margin-top: 3em;
+  margin-bottom: 1em;
 }
 .destinos .cards-destino {
   display: flex;
   justify-content: center;
   gap: 1em;
   margin-top: 1em;
+  flex-wrap: wrap;
 }
 .destinos .cards-destino .card-destino {
   background: #403d39;
   color: #ffffff;
-  padding: 2em;
+  padding: 1.5em;
   border-radius: 10px;
-  width: 150px;
+  width: 200px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+.destinos .cards-destino .card-destino:hover {
+  transform: scale(1.05);
 }/*# sourceMappingURL=style.css.map */
