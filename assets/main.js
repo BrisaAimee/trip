@@ -111,51 +111,97 @@ async function actividades(destino) { //api para traer info de la ciudad pero la
 //esta seccion es para el carrousel de experiencias
 
 const experiencias = [
-  { nombre: "Laura", texto: "Conocí gente increíble en Barcelona y fue el mejor viaje de mi vida." },
-  { nombre: "Carlos", texto: "En Toronto descubrí lugares que nunca hubiera visitado solo." },
-  { nombre: "Sofía", texto: "Roma es mágica, compartirla con otro viajero lo hizo aún mejor." },
-  { nombre: "Tomás", texto: "Viajando acompañado me animé a hacer cosas nuevas." }
+    { nombre: "Laura", texto: "Conocí gente increíble en Barcelona y fue el mejor viaje de mi vida." },
+    { nombre: "Carlos", texto: "En Toronto descubrí lugares que nunca hubiera visitado solo." },
+    { nombre: "Sofía", texto: "Roma es mágica, compartirla con otro viajero lo hizo aún mejor." },
+    { nombre: "Tomás", texto: "Viajando acompañado me animé a hacer cosas nuevas." },
+    { nombre: "Marta", texto: "París me sorprendió, compartirlo lo hizo aún más inolvidable." },
+    { nombre: "Luis", texto: "En Estambul descubrí la mezcla de culturas con un nuevo amigo." },
+    { nombre: "Ana", texto: "Tokio fue una aventura única que disfruté junto a otro viajero." },
 ];
 
 let i = 0;
 
 function mostrarExperiencia() {
-  const exp = experiencias[i];
-  const contenedor = document.getElementById("experiencia");
-  
-  // limpia el contenido anterior
-  contenedor.innerHTML = "";
+    const exp = experiencias[i];
+    const contenedor = document.getElementById("experiencia");
 
-  const card = document.createElement("div");
-  card.className = "card-exp";
+    // limpia el contenido anterior
+    contenedor.innerHTML = "";
 
-  const titulo = document.createElement("h3");
-  titulo.textContent = exp.nombre;
+    const card = document.createElement("div");
+    card.className = "card-exp";
 
-  const texto = document.createElement("p");
-  texto.textContent = exp.texto;
+    const titulo = document.createElement("h3");
+    titulo.textContent = exp.nombre;
 
-  card.appendChild(titulo);
-  card.appendChild(texto);
+    const texto = document.createElement("p");
+    texto.textContent = exp.texto;
 
-  contenedor.appendChild(card);
+    card.appendChild(titulo);
+    card.appendChild(texto);
+
+    contenedor.appendChild(card);
 }
 
 function siguiente() {
-  i = i + 1;
-  if (i >= experiencias.length) {
-    i = 0;
-  }
-  mostrarExperiencia();
+    i = i + 1;
+    if (i >= experiencias.length) {
+        i = 0;
+    }
+    mostrarExperiencia();
 }
 
 function anterior() {
-  i = i - 1;
-  if (i < 0) {
-    i = experiencias.length - 1;
-  }
-  mostrarExperiencia();
+    i = i - 1;
+    if (i < 0) {
+        i = experiencias.length - 1;
+    }
+    mostrarExperiencia();
 }
 
 mostrarExperiencia();
 
+
+//seccion para mostrar destinos recomendados
+const destinos = [
+    { nombre: "Barcelona", img: "media/barcelona.jpg", texto: "La ciudad del amor." },
+    { nombre: "Roma", img: "media/roma.jpg", texto: "Arte y cultura en cada esquina." },
+    { nombre: "Toronto", img: "media/toronto.jpg", texto: "Tradición y modernidad juntas." },
+    { nombre: "París", img: "media/paris.jpg", texto: "La ciudad del amor y la Torre Eiffel." },
+    { nombre: "Tokio", img: "media/tokio.jpeg", texto: "Tradición milenaria y tecnología moderna." },
+    { nombre: "Nueva York", img: "media/nueva york.jpg", texto: "La ciudad que nunca duerme." },
+    { nombre: "Londres", img: "media/londres.jpg", texto: "Historia, cultura y el famoso Big Ben." },
+    { nombre: "Sidney", img: "media/sidney.jpg", texto: "Playas, naturaleza y la icónica Opera House." },
+    { nombre: "Estambul", img: "media/estambul.jpeg", texto: "Puente entre Europa y Asia, lleno de colores." },
+    { nombre: "El Cairo", img: "media/cairo.jpeg", texto: "Pirámides, esfinges y tesoros del Antiguo Egipto." },
+];
+
+function mostrarDestinos() {
+    const contenedor = document.querySelector(".cards-destino");
+    contenedor.innerHTML = "";
+
+    for (let i = 0; i < destinos.length; i++) {
+        const d = destinos[i];
+
+        const card = document.createElement("div");
+        card.className = "card-destino";
+
+        const img = document.createElement("img");
+        img.src = d.img;
+        img.alt = d.nombre;
+
+        const titulo = document.createElement("h3");
+        titulo.textContent = d.nombre;
+
+        const parrafo = document.createElement("p");
+        parrafo.textContent = d.texto;
+
+        card.appendChild(img);
+        card.appendChild(titulo);
+        card.appendChild(parrafo);
+        contenedor.appendChild(card);
+    }
+}
+
+mostrarDestinos();

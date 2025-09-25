@@ -8,7 +8,7 @@ body {
 header {
   background: #e85d28;
   color: #ffffff;
-  padding: 1em;
+  padding: 1em 3em;
 }
 header nav {
   display: flex;
@@ -16,7 +16,7 @@ header nav {
   align-items: center;
 }
 header nav img {
-  width: 20%;
+  width: 10%;
 }
 header nav ul {
   list-style: none;
@@ -109,35 +109,56 @@ header nav ul li a {
 }
 
 .destinos {
-  text-align: center;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 .destinos h2 {
-  margin-top: 3em;
-  margin-bottom: 1em;
+  color: #e85d28;
+  text-align: center;
+  margin: 2em;
 }
 .destinos .cards-destino {
   display: flex;
   justify-content: center;
-  gap: 1em;
-  margin-top: 1em;
   flex-wrap: wrap;
+  gap: 1em;
+  margin: 0 auto;
 }
-.destinos .cards-destino .card-destino {
-  background: #403d39;
-  color: #ffffff;
-  padding: 1.5em;
+.destinos .card-destino {
+  background: #ffffff;
   border-radius: 10px;
-  width: 200px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  overflow: hidden;
+  width: 200px;
+  height: 250px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
-.destinos .cards-destino .card-destino:hover {
+.destinos .card-destino img {
+  width: 100%;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.destinos .card-destino h3 {
+  margin: 0.5em 0;
+  color: #e85d28;
+}
+.destinos .card-destino p {
+  font-size: 0.9em;
+  color: #252422;
+  padding: 0 0.5em 0.5em 0.5em;
+}
+.destinos .card-destino:hover {
   transform: scale(1.05);
+  background: rgb(252.7, 238.8, 233.5);
 }
 
 .experiencias {
   text-align: center;
   margin: 0 auto;
+  margin-top: 3em;
   background: radial-gradient(circle, #e85d28, #ffffff);
   width: auto;
   padding: 2em;
@@ -181,4 +202,47 @@ header nav ul li a {
 }
 .experiencias button:hover {
   background: rgb(10.4225352113, 10.1408450704, 9.5774647887);
+}
+
+@media (max-width: 1024px) {
+  .cards-destino {
+    max-width: calc(400px + 1em);
+  }
+}
+@media (max-width: 768px) {
+  .cards-destino {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+  .card-destino {
+    width: 90%;
+  }
+}
+.footer {
+  background: #252422;
+  color: #ffffff;
+  padding: 2em;
+}
+.footer .footer-contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer .footer-contenido p {
+  margin-bottom: 1em;
+  font-size: 0.9em;
+}
+.footer .footer-contenido nav {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+.footer .footer-contenido nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+.footer .footer-contenido nav a:hover {
+  color: #e85d28;
 }/*# sourceMappingURL=style.css.map */

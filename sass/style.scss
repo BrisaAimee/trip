@@ -10,7 +10,7 @@ body {
 header {
   background: $color-primario;
   color: $color-blanco;
-  padding: $spacing;
+  padding: $spacing $spacing * 3;
 
   nav {
     display: flex;
@@ -18,7 +18,7 @@ header {
     align-items: center;
 
     img {
-      width: 20%;
+      width: 10%;
     }
 
     ul {
@@ -127,32 +127,55 @@ header {
 }
 
 .destinos {
-  text-align: center;
+  margin: 0 auto;
+  max-width: 1200px;
 
-  h2 {
-    margin-top: 3 * $spacing;
-    margin-bottom: $spacing;
+    h2 {
+    color: $color-primario;
+    text-align: center;
+    margin: $spacing * 2;
   }
+
 
   .cards-destino {
     display: flex;
     justify-content: center;
-    gap: $gap-cards;
-    margin-top: $spacing;
     flex-wrap: wrap;
+    gap: $gap-cards;
+    margin: 0 auto;
+  }
 
-    .card-destino {
-      background: $color-secundario;
-      color: $color-blanco;
-      padding: 1.5 * $spacing;
-      border-radius: $border-radius;
-      width: $card-width;
-      box-shadow: $shadow;
-      transition: transform 0.2s;
+  .card-destino {
+    background: $color-blanco;
+    border-radius: $border-radius;
+    box-shadow: $shadow;
+    overflow: hidden;
+    width: $card-width;
+    height: 250px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 
-      &:hover {
-        transform: scale(1.05);
-      }
+    img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+
+    h3 {
+      margin: $spacing / 2 0;
+      color: $color-primario;
+    }
+
+    p {
+      font-size: 0.9em;
+      color: $color-dark;
+      padding: 0 0.5em 0.5em 0.5em;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      background: lighten($color-primario, 42%);
     }
   }
 }
@@ -161,6 +184,7 @@ header {
 .experiencias {
   text-align: center;
   margin: 0 auto;
+  margin-top: $spacing * 3;
   background: radial-gradient(circle, $color-primario, $color-blanco);
   width: auto;
   padding: $spacing * 2;
@@ -210,6 +234,57 @@ header {
 
     &:hover {
       background: darken($color-dark, 10%);
+    }
+  }
+}
+
+@media (max-width: 1024px) { // tablets
+  .cards-destino {
+    max-width: calc($card-width * 2 + $gap-cards);
+  }
+}
+
+@media (max-width: 768px) { // mobile
+  .cards-destino {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .card-destino {
+    width: 90%;
+  }
+}
+
+.footer {
+  background: $color-dark;
+  color: $color-blanco;
+  padding: $spacing * 2;
+
+  .footer-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+
+    p {
+      margin-bottom: $spacing;
+      font-size: 0.9em;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: $spacing;
+
+      a {
+        color: $color-blanco;
+        text-decoration: none;
+        font-size: 0.9em;
+
+        &:hover {
+          color: $color-primario;
+        }
+      }
     }
   }
 }
