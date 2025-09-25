@@ -1,0 +1,91 @@
+.perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $spacing * 3;
+    background: linear-gradient(135deg, lighten($color-primario, 20%), $color-light);
+
+    .perfil-card {
+        background: $color-blanco;
+        padding: $spacing * 3;
+        border-radius: $border-radius * 2;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+
+
+        .foto-perfil {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: $spacing;
+            border: 4px solid $color-primario;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            color: $color-dark;
+            margin-bottom: $spacing / 2;
+        }
+
+        .bio {
+            font-style: italic;
+            font-size: 0.95rem;
+            color: darken($color-dark, 15%);
+            margin-bottom: $spacing * 1.5;
+            line-height: 1.4;
+        }
+
+        .detalles {
+            text-align: left;
+            margin-bottom: $spacing * 2;
+
+            p {
+                margin: $spacing / 3 0;
+                font-size: 0.9rem;
+
+                strong {
+                    color: $color-primario;
+                }
+            }
+        }
+
+        .viajes-pasados {
+            margin-bottom: $spacing * 2;
+
+            h4 {
+                color: $color-secundario;
+                margin-bottom: $spacing / 2;
+                font-size: 1rem;
+                text-align: left;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    padding: $spacing / 3 $spacing;
+                    margin-bottom: $spacing / 3;
+                    border-radius: $border-radius / 2;
+                    background: lighten($color-primario, 42%);
+                    color: $color-dark;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .perfil {
+        padding: $spacing * 2;
+
+        .perfil-card {
+            padding: $spacing * 2;
+        }
+    }
+}

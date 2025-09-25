@@ -1,3 +1,82 @@
+.perfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3em;
+  background: linear-gradient(135deg, rgb(241.8571428571, 162.4285714286, 132.1428571429), #f5f5f5);
+}
+.perfil .perfil-card {
+  background: #ffffff;
+  padding: 3em;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+.perfil .perfil-card .foto-perfil {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 1em;
+  border: 4px solid #e85d28;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.perfil .perfil-card h3 {
+  font-size: 1.6rem;
+  color: #252422;
+  margin-bottom: 0.5em;
+}
+.perfil .perfil-card .bio {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: black;
+  margin-bottom: 1.5em;
+  line-height: 1.4;
+}
+.perfil .perfil-card .detalles {
+  text-align: left;
+  margin-bottom: 2em;
+}
+.perfil .perfil-card .detalles p {
+  margin: 0.3333333333em 0;
+  font-size: 0.9rem;
+}
+.perfil .perfil-card .detalles p strong {
+  color: #e85d28;
+}
+.perfil .perfil-card .viajes-pasados {
+  margin-bottom: 2em;
+}
+.perfil .perfil-card .viajes-pasados h4 {
+  color: #403d39;
+  margin-bottom: 0.5em;
+  font-size: 1rem;
+  text-align: left;
+}
+.perfil .perfil-card .viajes-pasados ul {
+  list-style: none;
+  padding: 0;
+}
+.perfil .perfil-card .viajes-pasados ul li {
+  padding: 0.3333333333em 1em;
+  margin-bottom: 0.3333333333em;
+  border-radius: 5px;
+  background: rgb(252.7, 238.8, 233.5);
+  color: #252422;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .perfil {
+    padding: 2em;
+  }
+  .perfil .perfil-card {
+    padding: 2em;
+  }
+}
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
@@ -219,6 +298,10 @@ header nav ul li a {
     width: 90%;
   }
 }
+header nav img {
+  width: 30%;
+}
+
 .footer {
   background: #252422;
   color: #ffffff;

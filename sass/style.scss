@@ -1,4 +1,5 @@
 @import "variables";
+@import "perfil";
 
 body {
   font-family: $font-main;
@@ -254,6 +255,10 @@ header {
   .card-destino {
     width: 90%;
   }
+}
+
+header nav img {
+  width: 30%;
 }
 
 .footer {
