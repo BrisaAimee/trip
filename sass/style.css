@@ -156,17 +156,18 @@ header nav ul li a {
   width: 200px;
   text-align: center;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   color: #252422;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 #resultados .alto {
-  background-color: #99e49b;
+  background-color: #d1ffd3;
 }
 #resultados .medio {
-  background-color: #f4a261;
+  background-color: #f8dec9;
 }
 #resultados .bajo {
-  background-color: #d86060;
+  background-color: #ffcaca;
 }
 
 .actividades {
@@ -297,11 +298,10 @@ header nav ul li a {
   .card-destino {
     width: 90%;
   }
+  header nav img {
+    width: 30%;
+  }
 }
-header nav img {
-  width: 30%;
-}
-
 .footer {
   background: #252422;
   color: #ffffff;
