@@ -9,7 +9,7 @@ body {
 
 header {
   background: $color-dark;
-  color: $color-white;
+  color: $color-blanco;
   padding: $spacing;
 
   nav {
@@ -23,7 +23,7 @@ header {
       gap: $spacing;
 
       li a {
-        color: $color-white;
+        color: $color-blanco;
         text-decoration: none;
       }
     }
@@ -31,7 +31,7 @@ header {
 }
 
 .buscador {
-  background: $color-white;
+  background: $color-blanco;
   padding: 2 * $spacing;
   margin: 2 * $spacing auto;
   width: 80%;
@@ -50,17 +50,35 @@ header {
     }
 
     button {
-      background: $color-primary;
-      color: $color-white;
+      background: $color-primario;
+      color: $color-blanco;
       font-weight: bold;
       cursor: pointer;
       border: none;
 
       &:hover {
-        background: darken($color-primary, 10%);
+        background: darken($color-primario, 10%);
       }
     }
   }
+}
+
+.card {
+    padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.alto {
+  background-color: $verde;
+}
+
+.medio {
+  background-color: $naranja;
+}
+
+.bajo {
+  background-color: $rojo;
 }
 
 .destinos {
@@ -70,15 +88,15 @@ header {
     margin-top: 2 * $spacing;
   }
 
-  .cards {
+  .cards-destino {
     display: flex;
     justify-content: center;
     gap: $spacing;
     margin-top: $spacing;
 
-    .card {
-      background: $color-secondary;
-      color: $color-white;
+    .card-destino {
+      background: $color-secundario;
+      color: $color-blanco;
       padding: 2 * $spacing;
       border-radius: $border-radius;
       width: 150px;

@@ -54,19 +54,37 @@ header nav ul li a {
   background: rgb(199.6428571429, 70.5714285714, 21.3571428571);
 }
 
+.card {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.alto {
+  background-color: #99e49b;
+}
+
+.medio {
+  background-color: #f4a261;
+}
+
+.bajo {
+  background-color: #d86060;
+}
+
 .destinos {
   text-align: center;
 }
 .destinos h2 {
   margin-top: 2em;
 }
-.destinos .cards {
+.destinos .cards-destino {
   display: flex;
   justify-content: center;
   gap: 1em;
   margin-top: 1em;
 }
-.destinos .cards .card {
+.destinos .cards-destino .card-destino {
   background: #403d39;
   color: #ffffff;
   padding: 2em;

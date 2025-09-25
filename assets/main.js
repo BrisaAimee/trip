@@ -49,6 +49,23 @@ function buscar() {
             } else {
                 color = "bajo";
             }
+
+            let card = document.createElement("div");
+            card.className = `card ${color}`; //asignar la clase card y el color
+
+            let titulo = document.createElement("h3");
+            titulo.textContent = viajero.nombre;
+
+            let destinoV = document.createElement("p");
+            destinoV.textContent = `Destino: ${viajero.destino}`;
+
+            let fechaV = document.createElement("p");
+            fechaV.textContent = `Fecha: ${viajero.fecha}`; //aca estoy creando todos los elementos
+
+            card.appendChild(titulo);
+            card.appendChild(destinoV);
+            card.appendChild(fechaV); //acá los estoy poniendo dentro de la card
+            resultados.appendChild(card); //y aca estoy poniendo la card dentro del div resultados, sino no se ve nada
         }
     }
 }
