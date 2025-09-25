@@ -20,17 +20,14 @@
   <main>
     <section class="buscador">
       <h1>¿A dónde vas?</h1>
-      <form>
-        <input type="text" placeholder="Destino">
-        <input type="date">
-        <select>
-          <option>Aventurero</option>
-          <option>Fiesta</option>
-          <option>Relax</option>
-        </select>
-        <button type="submit">Buscar</button>
+      <form id="formulario">
+        <input id="destino" type="text" placeholder="Destino">
+        <input id="fecha" type="date">
+        <button type="button" onclick="buscar()">Buscar</button>
       </form>
     </section>
+
+    <div id="resultados"></div>
 
     <section class="destinos">
       <h2>Destinos recomendados</h2>

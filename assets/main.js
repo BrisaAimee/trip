@@ -28,3 +28,27 @@ const viajeros = [
     new Viajero("Sofía", "Italia", "2025-11-10", ["fiestero", "tranquilo"]),
     new Viajero("Tomás", "España", "2025-10-05", ["aventurero"]),
 ];
+
+function buscar() {
+    let destino = document.getElementById("destino").value;
+    let fecha = document.getElementById("fecha").value;
+    let resultados = document.getElementById("resultados");
+    resultados.innerHTML = ""; // Limpiar resultados anteriores
+    
+    for (let i = 0; i < viajeros.length; i++) {
+        let viajero = viajeros[i]; //viajeros[i] agarra el viajero que corresponde a esa posición
+
+        if (viajero.destino.toLowerCase() === destino.toLowerCase() && viajero.fecha === fecha) {
+            let coincidencias = viajero.calcularMatch();
+            
+            let color;
+            if (coincidencias >= 2) {
+                color = "alto"; //clases que se ven en el sass
+            } else if (coincidencias === 1) {
+                color = "medio";
+            } else {
+                color = "bajo";
+            }
+        }
+    }
+}
