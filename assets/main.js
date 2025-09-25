@@ -28,7 +28,7 @@ const viajeros = [
     new Viajero("Sofía", "Roma", "2025-10-05", ["fiestero", "tranquilo"]),
     new Viajero("Tomás", "Barcelona", "2025-10-05", ["aventurero"]),
     new Viajero("Marta", "Toronto", "2025-10-05", ["fiestero"]),
-    new Viajero("Ana", "Barcelona", "2025-10-05", ["tranquilo"]), 
+    new Viajero("Ana", "Barcelona", "2025-10-05", ["tranquilo"]),
     new Viajero("Luis", "Barcelona", "2025-10-05", ["aventurero", "fiestero"]),
     new Viajero("Elena", "Toronto", "2025-10-05", ["tranquilo", "aventurero"]),
     new Viajero("Javier", "Roma", "2025-10-05", ["fiestero", "tranquilo"])
@@ -39,13 +39,13 @@ function buscar() {
     let fecha = document.getElementById("fecha").value;
     let resultados = document.getElementById("resultados");
     resultados.innerHTML = ""; // Limpiar resultados anteriores
-    
+
     for (let i = 0; i < viajeros.length; i++) {
         let viajero = viajeros[i]; //viajeros[i] agarra el viajero que corresponde a esa posición
 
         if (viajero.destino.toLowerCase() === destino.toLowerCase() && viajero.fecha === fecha) {
             let coincidencias = viajero.calcularMatch();
-            
+
             let color;
             if (coincidencias >= 2) {
                 color = "alto"; //clases que se ven en el sass
@@ -72,5 +72,37 @@ function buscar() {
             card.appendChild(fechaV); //acá los estoy poniendo dentro de la card
             resultados.appendChild(card); //y aca estoy poniendo la card dentro del div resultados, sino no se ve nada
         }
+    }
+    actividades(destino);
+}
+
+async function actividades(destino) { //api para traer info de la ciudad pero la versión en español no anda
+    const url = `https://en.wikivoyage.org/w/api.php?action=query&prop=extracts&exintro&explaintext&format=json&origin=*&titles=${destino}`;
+
+    try {
+        const res = await fetch(url);
+        const data = await res.json();
+
+        const page = Object.values(data.query.pages)[0];
+        const texto = page?.extract || "No se encontró información turística.";
+
+        const contenedor = document.getElementById("resultados");
+
+        const actividades = document.createElement("div");
+        actividades.className = "actividades";
+
+        const titulo = document.createElement("h3");
+        titulo.textContent = `Información de ${destino}`;
+
+        const parrafo = document.createElement("p");
+        parrafo.textContent = texto;
+
+        actividades.appendChild(titulo);
+        actividades.appendChild(parrafo);
+        contenedor.appendChild(actividades);
+
+
+    } catch (err) {
+        console.error("Error al traer información:", err);
     }
 }
