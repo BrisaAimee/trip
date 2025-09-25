@@ -54,21 +54,27 @@ header nav ul li a {
   background: rgb(199.6428571429, 70.5714285714, 21.3571428571);
 }
 
-.card {
-  padding: 10px;
-  margin: 5px;
-  border-radius: 5px;
+#resultados {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
 }
-
-.alto {
+#resultados .card {
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  color: #252422;
+}
+#resultados .alto {
   background-color: #99e49b;
 }
-
-.medio {
+#resultados .medio {
   background-color: #f4a261;
 }
-
-.bajo {
+#resultados .bajo {
   background-color: #d86060;
 }
 

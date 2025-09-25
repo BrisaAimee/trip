@@ -63,22 +63,24 @@ header {
   }
 }
 
-.card {
+#resultados {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $gap-cards;
+  margin-top: $spacing;
+
+  .card {
+    width: $card-width;
+    text-align: center;
     padding: 10px;
-  margin: 5px;
-  border-radius: 5px;
-}
+    border-radius: 5px;
+    color: $color-dark;
+  }
 
-.alto {
-  background-color: $verde;
-}
-
-.medio {
-  background-color: $naranja;
-}
-
-.bajo {
-  background-color: $rojo;
+  .alto  { background-color: $verde; }
+  .medio { background-color: $naranja; }
+  .bajo  { background-color: $rojo; }
 }
 
 .destinos {

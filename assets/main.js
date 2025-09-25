@@ -23,10 +23,15 @@ class Viajero {
 }
 
 const viajeros = [
-    new Viajero("Laura", "España", "2025-10-05", ["aventurero", "fiestero"]),
-    new Viajero("Carlos", "Canada", "2025-10-05", ["tranquilo", "aventurero"]),
-    new Viajero("Sofía", "Italia", "2025-11-10", ["fiestero", "tranquilo"]),
-    new Viajero("Tomás", "España", "2025-10-05", ["aventurero"]),
+    new Viajero("Laura", "Barcelona", "2025-10-05", ["aventurero", "fiestero"]),
+    new Viajero("Carlos", "Toronto", "2025-10-05", ["tranquilo", "aventurero"]),
+    new Viajero("Sofía", "Roma", "2025-10-05", ["fiestero", "tranquilo"]),
+    new Viajero("Tomás", "Barcelona", "2025-10-05", ["aventurero"]),
+    new Viajero("Marta", "Toronto", "2025-10-05", ["fiestero"]),
+    new Viajero("Ana", "Barcelona", "2025-10-05", ["tranquilo"]), 
+    new Viajero("Luis", "Barcelona", "2025-10-05", ["aventurero", "fiestero"]),
+    new Viajero("Elena", "Toronto", "2025-10-05", ["tranquilo", "aventurero"]),
+    new Viajero("Javier", "Roma", "2025-10-05", ["fiestero", "tranquilo"])
 ];
 
 function buscar() {
