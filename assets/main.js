@@ -106,3 +106,56 @@ async function actividades(destino) { //api para traer info de la ciudad pero la
         console.error("Error al traer información:", err);
     }
 }
+
+
+//esta seccion es para el carrousel de experiencias
+
+const experiencias = [
+  { nombre: "Laura", texto: "Conocí gente increíble en Barcelona y fue el mejor viaje de mi vida." },
+  { nombre: "Carlos", texto: "En Toronto descubrí lugares que nunca hubiera visitado solo." },
+  { nombre: "Sofía", texto: "Roma es mágica, compartirla con otro viajero lo hizo aún mejor." },
+  { nombre: "Tomás", texto: "Viajando acompañado me animé a hacer cosas nuevas." }
+];
+
+let i = 0;
+
+function mostrarExperiencia() {
+  const exp = experiencias[i];
+  const contenedor = document.getElementById("experiencia");
+  
+  // limpia el contenido anterior
+  contenedor.innerHTML = "";
+
+  const card = document.createElement("div");
+  card.className = "card-exp";
+
+  const titulo = document.createElement("h3");
+  titulo.textContent = exp.nombre;
+
+  const texto = document.createElement("p");
+  texto.textContent = exp.texto;
+
+  card.appendChild(titulo);
+  card.appendChild(texto);
+
+  contenedor.appendChild(card);
+}
+
+function siguiente() {
+  i = i + 1;
+  if (i >= experiencias.length) {
+    i = 0;
+  }
+  mostrarExperiencia();
+}
+
+function anterior() {
+  i = i - 1;
+  if (i < 0) {
+    i = experiencias.length - 1;
+  }
+  mostrarExperiencia();
+}
+
+mostrarExperiencia();
+

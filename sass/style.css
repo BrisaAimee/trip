@@ -133,4 +133,52 @@ header nav ul li a {
 }
 .destinos .cards-destino .card-destino:hover {
   transform: scale(1.05);
+}
+
+.experiencias {
+  text-align: center;
+  margin: 0 auto;
+  background: radial-gradient(circle, #e85d28, #ffffff);
+  width: auto;
+  padding: 2em;
+}
+.experiencias h2 {
+  color: #ffffff;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.experiencias #experiencia {
+  display: flex;
+  justify-content: center;
+}
+.experiencias .card-exp {
+  background: #ffffff;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0 auto 1em auto;
+  max-width: 70%;
+}
+.experiencias .card-exp h3 {
+  color: #e85d28;
+  margin-bottom: 0.5em;
+  font-size: 1.2rem;
+}
+.experiencias .card-exp p {
+  color: #252422;
+  line-height: 1.4;
+}
+.experiencias button {
+  background: #252422;
+  color: #ffffff;
+  border: none;
+  padding: 1em 1.5em;
+  margin: 1em;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.experiencias button:hover {
+  background: rgb(10.4225352113, 10.1408450704, 9.5774647887);
 }/*# sourceMappingURL=style.css.map */
